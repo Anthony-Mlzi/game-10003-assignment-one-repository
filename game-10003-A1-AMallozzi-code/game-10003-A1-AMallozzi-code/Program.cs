@@ -21,7 +21,7 @@ bool failedOperation = false;
 
 Console.WriteLine("As the best doctor in North West Burmingshire");
 Console.WriteLine("it is no wonder the duke himself has called upon you to perform such a task!");
-Console.WriteLine("The duke needs a lung transplant, you must oblige.");
+Console.WriteLine("The duke needs a Lung transplant, you must oblige.");
 Console.WriteLine("First, you will announce your last name!");
 //define user name
     String userName = Console.ReadLine();
@@ -299,9 +299,9 @@ Console.WriteLine("What shall you use?");
 string lungtool = Console.ReadLine();
 
 //scalpel
-if (lungtool.Contains(""))
+if (lungtool.Contains("scalpel"))
 {
-    Console.WriteLine("");
+    Console.WriteLine("Interesting choice Doctor, you may have some ");
     Console.WriteLine("");
 
     string lungknow = Console.ReadLine();
@@ -318,7 +318,7 @@ if (lungtool.Contains(""))
     Console.WriteLine("The Lungs have been removed.");
 }
 //circsaw
-if (lungtool.Contains(""))
+if (lungtool.Contains("circsaw"))
 {
     Console.WriteLine("");
     Console.WriteLine("");
@@ -337,7 +337,7 @@ if (lungtool.Contains(""))
     Console.WriteLine("The Lungs have been removed.");
 }
 //bonesaw
-if (lungtool.Contains(""))
+if (lungtool.Contains("bonesaw"))
 {
     Console.WriteLine("");
     Console.WriteLine("");
@@ -356,7 +356,7 @@ if (lungtool.Contains(""))
     Console.WriteLine("The Lungs have been removed.");
 }
 //hammer
-if (lungtool.Contains(""))
+if (lungtool.Contains("hammer"))
 {
     Console.WriteLine("");
     Console.WriteLine("");
@@ -375,7 +375,7 @@ if (lungtool.Contains(""))
     Console.WriteLine("The Lungs have been removed.");
 }
 //hands
-if (lungtool.Contains(""))
+if (lungtool.Contains("hands"))
 {
     Console.WriteLine("");
     Console.WriteLine("");
@@ -392,4 +392,114 @@ if (lungtool.Contains(""))
         bodyCondition -= 0;
     }
     Console.WriteLine("The Lungs have been removed.");
+}
+
+//Lung operation complete
+
+Console.WriteLine("");
+Console.WriteLine("Now that the lungs are removed, the heart is next, perhaps a change of tool is in order?");
+Console.WriteLine("Remember Doctor, the heart is very delicate, be sure to take good care.");
+Console.WriteLine("My scalpel!");
+Console.WriteLine("My circsaw!");
+Console.WriteLine("My bonesaw!");
+Console.WriteLine("My hammer!");
+Console.WriteLine("My hands!");
+Console.WriteLine("What shall you use?");
+
+string heartTool = Console.ReadLine();
+
+//scalpel
+if (heartTool.Contains("scalpel"))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string heartKnow = Console.ReadLine();
+    if (heartKnow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The heart has been removed.");
+}
+//circsaw
+if (heartTool.Contains("circsaw"))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string lungknow = Console.ReadLine();
+    if (lungknow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The heart has been removed.");
+}
+//bonesaw
+if (heartTool.Contains("bonesaw"))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string heartKnow = Console.ReadLine();
+    if (heartKnow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The heart has been removed.");
+}
+//hammer
+if (heartTool.Contains("hammer"))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string heartKnow = Console.ReadLine();
+    if (heartKnow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The heart has been removed.");
+}
+//hands
+if (heartTool.Contains("hands"))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string heartKnow = Console.ReadLine();
+    if (heartKnow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The heart has been removed.");
 }
