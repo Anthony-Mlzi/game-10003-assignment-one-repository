@@ -1,193 +1,395 @@
 ﻿//Assignment One interactive terminal project
-//Escape the Alchemist's chambers
+//remove the patients organs
 
-//introduction
-    Console.WriteLine("You wake on a worn leather stretcher.");
-    Console.WriteLine("Staring up at the dimly lit ceiling, your head pounding, you try to recall recent memories.");
-    Console.WriteLine("Where are you? Why am I on a stretcher? What time is it? Who put you here? Who are you?");
-    Console.WriteLine("A sharp pain as you shift interrupts your thoughts, you look down");
-    Console.WriteLine("to find a deep cut along your side, slowly bleeding.");
-    Console.WriteLine("you need to stand up, and get out before the bloodloss takes you...");
+//Define Variables
 
-    //defining user input, first choices, items and blood
+int bodyCondition = 100;
 
-    string userInput = Console.ReadLine();
+string scalpel = ("scalpel");
+string circsaw = ("circsaw");
+string bonesaw = ("bonesaw");
+string hammer = ("hammer");
+string hands = ("hands");
 
-    bool actionStand = userInput.Contains("stand");
+bool perfectOperation = false;
+bool goodOperation = false;
+bool okayOperation = false;
+bool badOperation = false;
+bool failedOperation = false;
 
-    bool actionLook = userInput.Contains("look");
+//start game
 
-    bool actionSitUp = userInput.Contains("sit");
+Console.WriteLine("As the best doctor in North West Burmingshire");
+Console.WriteLine("it is no wonder the duke himself has called upon you to perform such a task!");
+Console.WriteLine("The duke needs a lung transplant, you must oblige.");
+Console.WriteLine("First, you will announce your last name!");
+//define user name
+    String userName = Console.ReadLine();
 
-    int blood = 1000;
+Console.WriteLine($"Yes yes of course you are THE Dr.{userName}!");
+Console.WriteLine("How old are you again? The years have not been kind to my memories.");
 
+//define user age and years in the medical field
+    int playerAge = int.Parse(Console.ReadLine());
+    int doctorAge = playerAge / 2;
 
-            if (actionStand == true)
-            {
-                Console.WriteLine("you stand up from the stretcher, the floor is old hardwood and creaks with your weight");
-                Console.WriteLine("the room around you contains several curiousities.");
-                Console.WriteLine("> a stretcher");
-                Console.WriteLine("> a door");
-                Console.WriteLine("> a torch");
-                Console.WriteLine("> a desk");
-                Console.WriteLine("> a short sword");
-                Console.WriteLine("Perhaps you should look for a way out.");
-    blood -= 100;
-    Console.WriteLine($"you only have {blood} blood left.");
-    userInput = Console.ReadLine();
-}
+Console.WriteLine($"Ah yes of course you are {playerAge}, you've been studying medicine for {doctorAge} years!");
 
-            else if (actionLook == true)
-            {
-                Console.WriteLine("You Look around the room.");
-                Console.WriteLine("the room around you contains several curiousities.");
-                Console.WriteLine("> a stretcher");
-                Console.WriteLine("> a door");
-                Console.WriteLine("> a torch");
-                Console.WriteLine("> a desk");
-                Console.WriteLine("> a short sword");
-                Console.WriteLine("Perhaps you should look for a way out.");
-    blood -= 100;
-    Console.WriteLine($"you only have {blood} blood left.");
-    userInput = Console.ReadLine();
-}
+Console.WriteLine("Jolly good, The duke is on the operating table, and your tools laid out.");
+Console.WriteLine("My scalpel!");
+Console.WriteLine("My circsaw!");
+Console.WriteLine("My bonesaw!");
+Console.WriteLine("My hammer!");
+Console.WriteLine("My hands!");
+Console.WriteLine("Remember good Doctor, a good choice of tool and sharp mind is needed to maintain the body condition.");
+Console.WriteLine("This is the Duke himself after all!");
+Console.WriteLine("Right, first the skin of the torso must be opened, what tool shall you use?");
 
-            else if (actionSitUp == true)
-            {
-                Console.WriteLine("You sit up.");
-                Console.WriteLine("the room around you contains several curiousities.");
-                Console.WriteLine("> a stretcher");
-                Console.WriteLine("> a door");
-                Console.WriteLine("> a torch");
-                Console.WriteLine("> a desk");
-                Console.WriteLine("> a short sword");
-                Console.WriteLine("Perhaps you should take a closer look at something...");
-    blood -= 100;
-    Console.WriteLine($"you only have {blood} blood left.");
-    userInput = Console.ReadLine();   
-            }
-
-            else
-            {
-                Console.WriteLine("Please enter a valid command.");
-                userInput = Console.ReadLine();
-            }
-
-
-
-if (userInput.Contains("stretcher"))
+//Begin operating on the skin
+//scalpel choice
+string skinTool = Console.ReadLine();
+if (skinTool.Contains(scalpel))
 {
-    Console.WriteLine("you inspect the stretcher you woke up on.");
-    Console.WriteLine("a rusty brass frame holds the torn leather bed atop.");
-    Console.WriteLine("it smells metallic and a hint of something sour.");
-    Console.WriteLine("Doesn't look like there's anything of value here, maybe somewhere else?");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-    userInput = Console.ReadLine();
-}
-else if (userInput.Contains("door")) 
-{
-    Console.WriteLine("you approach the door");
-    Console.WriteLine("It's made of some kind of dark stained wood and fixed with a large metal frame.");
-    Console.WriteLine("the doorknob is intricately engraved, just below it is a large metal box with a keyhole.");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-    userInput = Console.ReadLine();
-}
-else if (userInput.Contains("torch")) 
-{
-    Console.WriteLine("The torch mounted on the wall illuminates the stone brick room.");
-    Console.WriteLine("The dancing flames warm your blood and bring you comfort.");
-    Console.WriteLine("it's not locked in place and could be removed from its mount if necessary.");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-    userInput = Console.ReadLine();
-}
-else if (userInput.Contains("desk"))
-{
-    Console.WriteLine("The old desk is covered in clutter.");
-    Console.WriteLine("Scrolls, bottles, and quills cover the scarred surface.");
-    Console.WriteLine("There is a single drawer, closed.");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-    userInput = Console.ReadLine();
-}
-else if (userInput.Contains("sword"))
-{
-    Console.WriteLine("a short sword hangs on the wall opposite the desk.");
-    Console.WriteLine("The blade is thin and sharp, the hilt secured to the wall with a knotted rope");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-    userInput = Console.ReadLine();
-}
-else
-{
-    Console.WriteLine("Please enter a valid response");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-    userInput = Console.ReadLine();
-}
-//first user input complete
-//define second user input
-
-
-/*
-
-string userInputTwo = Console.ReadLine();
-
-if (userInputTwo.Contains("stretcher"))
-{
-    Console.WriteLine("you inspect the stretcher you woke up on.");
-    Console.WriteLine("a rusty brass frame holds the torn leather bed atop.");
-    Console.WriteLine("it smells metallic and a hint of something sour.");
-    Console.WriteLine("Doesn't look like there's anything of value here, maybe somewhere else?");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-}
-
-else if (userInputTwo.Contains("door"))
-{
-    Console.WriteLine("you approach the door");
-    Console.WriteLine("It's made of some kind of dark stained wood and fixed with a large metal frame.");
-    Console.WriteLine("the doorknob is intricately engraved, just below it is a large metal box with a keyhole.");
-    String userDoor = Console.ReadLine();
-
-    if (userDoor.Contains("open"))
+    Console.WriteLine($"excellent choice Doctor {userName}, a true surgeons tool!");
+    Console.WriteLine($"you draw a good strong slice, but what shape was the cut supposed to be in again? Was it an x or y?");
+    
+        string skinKnow = Console.ReadLine();
+    if (skinKnow.Contains("y"))
     {
-        Console.WriteLine("You reach for the doorknob and turn but it doesn't budge");
-        Console.WriteLine("must be locked, maybe the key is somewhere in the room?");
+        Console.WriteLine("Yes of course! The cut should be in the shape of a y.");
     }
+    else if (skinKnow.Contains("x"))
+    {
+        Console.WriteLine("I'm not so sure that's right but you're the doctor!");
+        bodyCondition -= 10;
+    }
+    else
+    {
+        Console.WriteLine("Well the medical field is full of mysteries, best just try something...");
+        bodyCondition -= 10;
+    }
+        Console.WriteLine("you've opened the torso and revealed the ribs.");
 }
 
-else if (userInputTwo.Contains("window"))
+//circsaw choice
+if (skinTool.Contains(circsaw))
 {
-    Console.WriteLine("The window sits close to the ceiling just above the stretcher.");
-    Console.WriteLine("On the other side of the three hefty iron bars of the slit");
-    Console.WriteLine("You can see the darkness of the infinite night");
-    Console.WriteLine("If there's a way out, this isn't it...");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
+    Console.WriteLine($"Interesting choice Doctor {userName}, I suppose it is a blade after all.");
+    Console.WriteLine($"you draw a shaky slice, but what shape was the cut supposed to be in again? Was it an x or y?");
+
+    string skinKnow = Console.ReadLine();
+    if (skinKnow.Contains("y"))
+    {
+        Console.WriteLine("Yes of course! The cut should be in the shape of a y.");
+        bodyCondition -= 10;
+    }
+    else if (skinKnow.Contains("x"))
+    {
+        Console.WriteLine("I'm not so sure that's right but you're the doctor!");
+        bodyCondition -= 15;
+    }
+    else
+    {
+        Console.WriteLine("Well the medical field is full of mysteries, best just try something...");
+        bodyCondition -= 15;
+    }
+    Console.WriteLine("You bring the violent blade across the chest, blood paints your scrubs and ruins the decor.");
+    Console.WriteLine("Not perfect but you have revealed the ribs.");
 }
 
-else if (userInputTwo.Contains("torch"))
+//boonesaw choice
+if (skinTool.Contains(bonesaw))
 {
-    Console.WriteLine("The torch mounted on the wall illuminates the stone brick room.");
-    Console.WriteLine("The dancing flames warm your blood and bring you comfort.");
-    Console.WriteLine("it's not locked in place and could be removed from its mount if necessary.");
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
-    userInputTwo = Console.ReadLine();
+    Console.WriteLine($"uhh... Doctor I am not too sure if that is a good idea...");
+    Console.WriteLine("You begin the grisly process of flaying the skin in a motion like that of woodworking.");
+    Console.WriteLine("But wait! What shape was the cut supposed to be in again? Was it an x or y?");
 
-    string actionTorch = Console.ReadLine();
+    string skinKnow = Console.ReadLine();
+    if (skinKnow.Contains("y"))
+    {
+        Console.WriteLine("Yes of course! The cut should be in the shape of a y.");
+        bodyCondition -= 10;
+    }
+    else if (skinKnow.Contains("x"))
+    {
+        Console.WriteLine("I'm not so sure that's right but you're the doctor!");
+        bodyCondition -= 15;
+    }
+    else
+    {
+        Console.WriteLine("Well the medical field is full of mysteries, best just try something...");
+        bodyCondition -= 15;
+    }
+    Console.WriteLine("It's a symphony of flesh! what a mess...");
+    Console.WriteLine("Good Lord that'll leave a scar, but you are on to the ribs regardless.");
 }
-if (actionTor.Contains("take")) ;
+
+//hammer choice
+if (skinTool.Contains(hammer))
 {
-    Console.WriteLine("you lift the torch from its rusted metal frame.");
-    Console.WriteLine("You now have a torch.");
-    itemTorch = true;
-    blood -= 150;
-    Console.WriteLine($"you only have {blood} blood left");
+    Console.WriteLine("Doctor no! How did that even get into the operating room!?");
+    Console.WriteLine("You use the back of the hammer like a wrench, pulling and tearing the skin away!");
+    Console.WriteLine("Hold on! What shape was the cut supposed to be in again? Was it an x or y?");
+
+    string skinKnow = Console.ReadLine();
+    if (skinKnow.Contains("y"))
+    {
+        Console.WriteLine("Yes of course! The cut should be in the shape of a y.");
+        bodyCondition -= 20;
+    }
+    else if (skinKnow.Contains("x"))
+    {
+        Console.WriteLine("I'm not so sure that's right but you're the doctor!");
+        bodyCondition -= 30;
+    }
+    else
+    {
+        Console.WriteLine("Well the medical field is full of mysteries, best just try something...");
+        bodyCondition -= 30;
+    }
+    Console.WriteLine("You have shown your twisted mind upon this day...");
+    Console.WriteLine("But you have revealed the ribs.");
 }
-userInputTwo = Console.ReadLine();
+
+//hands choice
+if (skinTool.Contains(hands))
+{
+    Console.WriteLine("Dear God, what on earth are you doing!?");
+    Console.WriteLine("You crack your knuckles and get to grabbing and pulling the torso apart.");
+    Console.WriteLine("You have violated the medical process.");
+    bodyCondition -= 30;
+    Console.WriteLine("Yes, the ribs are revealed, but... at what cost?");
 }
-*/
+
+//operating on the skin is concluded
+//begin operating on the ribs
+
+Console.WriteLine("With the skin open, the ribs are next, perhaps a change of tool is in order?");
+Console.WriteLine("My scalpel!");
+Console.WriteLine("My circsaw!");
+Console.WriteLine("My bonesaw!");
+Console.WriteLine("My hammer!");
+Console.WriteLine("My hands!");
+Console.WriteLine("What shall you use?");
+
+string ribTool = Console.ReadLine();
+
+//scalpel choice
+if (ribTool.Contains("scalpel"))
+{
+    Console.WriteLine("Doctor I admire your commitment to precision Doctor but...");
+    Console.WriteLine("I don't know about this.");
+    Console.WriteLine("Before you start, how many ribs do humans have again?");
+    
+    int ribKnow = int.Parse(Console.ReadLine());
+    if (ribKnow == 24)
+    {
+        Console.WriteLine($"Ah yes that is correct, {ribKnow}");
+        bodyCondition -= 10;
+    }
+    else
+    {
+        Console.WriteLine("Numbers were never your strong suit...");
+        bodyCondition -= 10;
+    }
+    Console.WriteLine("It takes hours, and more than a couple scalpels,");
+    Console.WriteLine("but by pure friction you have dismantled the ribcage.");
+    Console.WriteLine("The ribs have been removed.");
+}
+
+//circsaw choice
+if (ribTool.Contains("circsaw"))
+{
+    Console.WriteLine("A good choice Doctor, a tool of many uses.");
+    Console.WriteLine("Before you start, how many ribs do humans have again?");
+
+    int ribKnow = int.Parse(Console.ReadLine());
+    if (ribKnow == 24)
+    {
+        Console.WriteLine($"Ah yes that is correct, {ribKnow}");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine("Numbers were never your strong suit...");
+        bodyCondition -= 10;
+    }
+    Console.WriteLine("It takes quite some time but the work is relatively clean.");
+    Console.WriteLine("The ribs have been removed.");
+}
+
+//bonesaw choice
+if (ribTool.Contains("bonesaw"))
+{
+    Console.WriteLine("A perfect choice Doctor! The bane of marrow itself.");
+    Console.WriteLine("Before you start, how many ribs do humans have again?");
+
+    int ribKnow = int.Parse(Console.ReadLine());
+    if (ribKnow == 24)
+    {
+        Console.WriteLine($"Ah yes that is correct, {ribKnow}");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine("Numbers were never your strong suit...");
+        bodyCondition -= 5;
+    }
+    Console.WriteLine("You delicately saw each rib at the outer edge of the torso");
+    Console.WriteLine("A magnificent job, good sir.");
+    Console.WriteLine("The ribs have been removed.");
+}
+
+//hammer choice
+if (ribTool.Contains("hammer"))
+{
+    Console.WriteLine("A bit unconventional and messy, but a tough job requires a tough tool I suppose.");
+    Console.WriteLine("Before you start, how many ribs do humans have again?");
+
+    int ribKnow = int.Parse(Console.ReadLine());
+    if (ribKnow == 24)
+    {
+        Console.WriteLine($"Ah yes that is correct, {ribKnow}");
+        bodyCondition -= 5;
+    }
+    else
+    {
+        Console.WriteLine("Numbers were never your strong suit...");
+        bodyCondition -= 15;
+    }
+    Console.WriteLine("You raise the hammer high and bring it down harsh on the sternum.");
+    Console.WriteLine("a series of consecutive hits loosens the cage enough for it to be pulled.");
+    Console.WriteLine("The ribs have been removed.");
+}
+
+//hands choice
+if (ribTool.Contains("hands"))
+{
+    Console.WriteLine("Jesus of Nazareth, your bare hands? Are you mad?");
+    Console.WriteLine("Before you start, how many ribs do humans have again?");
+
+    int ribKnow = int.Parse(Console.ReadLine());
+    if (ribKnow == 24)
+    {
+        Console.WriteLine($"Ah yes that is correct, {ribKnow}");
+        bodyCondition -= 10;
+    }
+    else
+    {
+        Console.WriteLine("Numbers were never your strong suit...");
+        bodyCondition -= 10;
+    }
+    Console.WriteLine("You pull up your sleeves and wrap your fist around the first rib");
+    Console.WriteLine("With a hard twist and yank, the rib is free with a disturbing pop.");
+    Console.WriteLine("You continue on, repeating the process...");
+    Console.WriteLine("The ribs have been removed.");
+}
+//operating on the ribs complete
+//begin operating on the lungs
+
+Console.WriteLine("Now that the ribs are removed, the lungs are next, perhaps a change of tool is in order?");
+Console.WriteLine("Remember Doctor, the lungs must be removed at the trachea, a chamber of cartilage and bone.");
+Console.WriteLine("My scalpel!");
+Console.WriteLine("My circsaw!");
+Console.WriteLine("My bonesaw!");
+Console.WriteLine("My hammer!");
+Console.WriteLine("My hands!");
+Console.WriteLine("What shall you use?");
+
+string lungtool = Console.ReadLine();
+
+//scalpel
+if (lungtool.Contains(""))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string lungknow = Console.ReadLine();
+    if (lungknow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+        {
+        Console.WriteLine();
+        bodyCondition -= 0;
+        }
+    Console.WriteLine("The Lungs have been removed.");
+}
+//circsaw
+if (lungtool.Contains(""))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string lungknow = Console.ReadLine();
+    if (lungknow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The Lungs have been removed.");
+}
+//bonesaw
+if (lungtool.Contains(""))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string lungknow = Console.ReadLine();
+    if (lungknow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The Lungs have been removed.");
+}
+//hammer
+if (lungtool.Contains(""))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string lungknow = Console.ReadLine();
+    if (lungknow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The Lungs have been removed.");
+}
+//hands
+if (lungtool.Contains(""))
+{
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    string lungknow = Console.ReadLine();
+    if (lungknow.Contains(""))
+    {
+        Console.WriteLine("");
+        bodyCondition -= 0;
+    }
+    else
+    {
+        Console.WriteLine();
+        bodyCondition -= 0;
+    }
+    Console.WriteLine("The Lungs have been removed.");
+}
