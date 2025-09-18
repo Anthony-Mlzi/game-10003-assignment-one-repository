@@ -56,3 +56,9 @@ Interestingly, every player took the trivia questions more seriously, pausing to
 
 I concluded playtesting and rechecked the formatting of the code before submitting the final project.
 
+## How to Play
+
+to play my game, all you need to do is follow the instructions provided in the console, make sure all user inputs are in lower case and all number based questions are answered with a integer format. Except for one word specific answers such as player name or number answers, all choices can be answered with a number of words so long as the sentence includes the word of the selected choice.
+
+Most Importantly, have fun and thanks for playing.
+
