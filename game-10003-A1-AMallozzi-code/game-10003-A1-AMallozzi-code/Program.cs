@@ -116,6 +116,7 @@ if (skinTool.Contains(bonesaw))
     Console.WriteLine("It's a symphony of flesh! what a mess...");
     Console.WriteLine("Good Lord that'll leave a scar, but you are on to the ribs regardless.");
 }
+
 //hands choice
 if (skinTool.Contains(hands))
 {
@@ -259,6 +260,7 @@ if (heartTool.Contains("scalpel"))
     Console.WriteLine("You work up a sweat sawing at the tough tissue but manage to get through");
     Console.WriteLine("The heart has been removed.");
 }
+
 //circsaw
 if (heartTool.Contains("circsaw"))
 {
@@ -279,6 +281,7 @@ if (heartTool.Contains("circsaw"))
     Console.WriteLine("With the gentle motion of a composer, you seperate the arteries from the heart.");
     Console.WriteLine("The heart has been removed.");
 }
+
 //bonesaw
 if (heartTool.Contains("bonesaw"))
 {
@@ -300,6 +303,7 @@ if (heartTool.Contains("bonesaw"))
     Console.WriteLine("push the blade back and forth.");
     Console.WriteLine("The heart has been removed.");
 }
+
 //hands
 if (heartTool.Contains("hands"))
 {
@@ -319,7 +323,7 @@ if (heartTool.Contains("hands"))
         bodyCondition -= 40;
     }
     Console.WriteLine("With both hands you firmly grip the heart...");
-    Console.WriteLine("Yoou bring your heels to the edge of the table and assume a crouched position as you tug");
+    Console.WriteLine("You bring your heels to the edge of the table and assume a crouched position as you tug");
     Console.WriteLine("with all of your weight.");
     Console.WriteLine("A grotesque pop and you fly back onto your bottom, the bloody mass in your lap.");
     Console.WriteLine("The heart has been removed.");
@@ -332,6 +336,7 @@ bool surgeryFailure = surgeryBelow && surgeryZero;
 
 Console.WriteLine($"Well that was something Dr.{userName}.");
 
+//check conditions for ending
 if (surgeryAbove == true)
 {
     Console.WriteLine("Well done, the Duke is saved and Burmingshire is in your gratitude!");
@@ -350,3 +355,4 @@ else if (surgeryAbove == false)
         }
     }
 }
+//Game over
